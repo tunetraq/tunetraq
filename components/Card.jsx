@@ -7,7 +7,7 @@ function Card() {
 
     return (
         <>
-        <article onClick={() => router.push('/about')} className="mt-4 mx-1 border bg-white shadow-md ">
+        <article className="mt-4 mx-1 border bg-white shadow-md ">
             {/* card header */}
             <div className="flex items-center p-2">
                 <div>
@@ -24,7 +24,7 @@ function Card() {
                 </div>
             </div>
             {/* card thumbnail */}
-            <Image className="object-cover mx-4 cursor-pointer"  src="/assets/thumb1.jpg" width={900} height={500} />
+            <Image onClick={() => router.push('/play')} className="object-cover mx-4 cursor-pointer"  src="/assets/thumb1.jpg" width={900} height={500} />
             {/* card icons */}
             <div className="flex py-1 px-3">
                 <div className="flex flex-1">
@@ -59,7 +59,7 @@ function Card() {
             </div>
             {/* card title & text */}
             <div className="px-3 pb-2">
-                <h1 className="font-bold text-sm text-gray-800 cursor-pointer">Sawa sawa ft Khaligraph Jones (Official Music Video)</h1>
+                <h1 onClick={() => router.push('/play')} className="font-bold text-sm text-gray-800 cursor-pointer">Sawa sawa ft Khaligraph Jones (Official Music Video)</h1>
                 <p className="line-clamp-2 text-gray-400 text-xs ">This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated
                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
