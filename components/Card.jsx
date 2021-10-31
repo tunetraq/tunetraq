@@ -59,7 +59,7 @@ function Card() {
             </div>
             {/* card title & text */}
             <div className="px-3 pb-2">
-                <h1 onClick={() => router.push('/play')} className="font-bold text-sm text-gray-800 cursor-pointer">Sawa sawa ft Khaligraph Jones (Official Music Video)</h1>
+                <h1 onClick={() => router.push('/play')} className="font-bold text-sm text-gray-800 cursor-pointer capitalize line-clamp-2">Sawa sawa ft Khaligraph Jones (Official Music Video)</h1>
                 <p className="line-clamp-2 text-gray-400 text-xs ">This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated
                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 

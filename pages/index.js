@@ -4,9 +4,9 @@ import Header from '../components/Header'
 
 export default function Home() {
   return (
-    <div className="bg-gray-50" >
+    <div className="bg-gray-50 min-h-screen" >
       <Head>
-          <title>tunetraq - Tracking the world's music.</title>
+          <title>tunetraq - Keeping track of the world's music.</title>
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>

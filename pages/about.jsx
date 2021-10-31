@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 function About() {
     return (
-        <div className="bg-gray-50 h-screen">
+        <div className="bg-gray-50 min-h-screen">
             <Head>
                 <title>tunetraq - About us.</title>
                 <link rel="icon" href="/favicon.ico" />
