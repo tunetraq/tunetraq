@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import ReactShowMoreText from 'react-show-more-text';
 
 function Card() {
 
@@ -30,12 +31,12 @@ function Card() {
                 <div className="flex flex-1">
                     <div className="mr-5 cursor-pointer text-gray-600 hover:scale-125 transition-all duration-150 ease-out">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clipRule="evenodd" />
+                                <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
                         </svg>
                     </div>
                     <div className="mr-5 cursor-pointer text-gray-600 hover:scale-125 transition-all duration-150 ease-out">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
+                            <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd" />
                         </svg>
                     </div>
                     <div className="mr-5 cursor-pointer text-gray-600 hover:scale-125 transition-all duration-150 ease-out">
@@ -60,11 +61,27 @@ function Card() {
             {/* card title & text */}
             <div className="px-3 pb-2">
                 <h1 onClick={() => router.push('/play')} className="font-bold text-sm text-gray-800 cursor-pointer capitalize line-clamp-2">Sawa sawa ft Khaligraph Jones (Official Music Video)</h1>
-                <p className="line-clamp-2 text-gray-400 text-xs ">This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated
+                <ReactShowMoreText
+                    lines={2}
+                    more="SHOW MORE"
+                    less="SHOW LESS"
+                    className="text-gray-400 text-xs "
+                    expanded={false}
+                 
+                 >
+                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated
                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
-                 </p>
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                 </ReactShowMoreText>
             </div>
             {/* card footer */}
             <div className="flex px-3 py-2 text-xs text-gray-400 border-t">
@@ -82,12 +99,18 @@ function Card() {
                         <span>345 Dislikes</span>
                     </div>
                 </div>
-                <div>3.6m views</div>
+                <div className="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                        <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>3.6m views</span>
+                </div>
             </div>
         </article>
 
-        {/* sponsored content */}
-        <article onClick={() => router.push('/about2')} className="mt-4 mx-1 border bg-white shadow-md">
+        {/* second card */}
+        <article className="my-4 mx-1 border bg-white shadow-md">
             {/* card header */}
             <div className="flex items-center p-2">
                 <div>
@@ -104,18 +127,18 @@ function Card() {
                 </div>
             </div>
             {/* card thumbnail */}
-            <Image className="object-cover mx-4 cursor-pointer"  src="/assets/thumb3.jpg" width={900} height={500} />
+            <Image onClick={() => router.push('/about2')} className="object-cover mx-4 cursor-pointer"  src="/assets/thumb3.jpg" width={900} height={500} />
             {/* card icons */}
             <div className="flex py-1 px-3">
                 <div className="flex flex-1">
                     <div className="mr-5 cursor-pointer text-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clipRule="evenodd" />
+                                <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
                         </svg>
                     </div>
                     <div className="mr-5 cursor-pointer text-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
+                            <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd" />
                         </svg>
                     </div>
                     <div className="mr-5 cursor-pointer text-gray-600">
@@ -139,12 +162,28 @@ function Card() {
             </div>
             {/* card title & text */}
             <div className="px-3 pb-2">
-                <h1 className="font-bold text-sm text-gray-800 cursor-pointer">Jamila ft Reekado Banks (Official Music Video)</h1>
-                <p className="line-clamp-2 text-gray-400 text-xs ">This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated
+                <h1 onClick={() => router.push('/about2')} className="font-bold text-sm text-gray-800 cursor-pointer">Jamila ft Reekado Banks (Official Music Video)</h1>
+                 <ReactShowMoreText
+                    lines={2}
+                    more="SHOW MORE"
+                    less="SHOW LESS"
+                    className="text-gray-400 text-xs "
+                    expanded={false}
+                 
+                 >
+                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated
                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
                 This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
-                 </p>
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                This is the description of the song which if long should be trancated. This is the description of the song which if long should be trancated 
+                 </ReactShowMoreText>
             </div>
             {/* card footer */}
             <div className="flex px-3 py-2 text-xs text-gray-400 border-t">
@@ -162,7 +201,13 @@ function Card() {
                         <span>345 Dislikes</span>
                     </div>
                 </div>
-                <div>3.6m views</div>
+                <div className="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                        <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>900k views</span>
+                </div>
             </div>
         </article>
         </>

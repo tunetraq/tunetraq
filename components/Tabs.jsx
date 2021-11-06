@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { useState } from 'react';
 
+import TopSponsoredContent from "./TopSponsoredContent"
+
 
 function Tabs() {
 
@@ -16,8 +18,8 @@ function Tabs() {
                 <div
                     onClick={() => toggleTab("LINKS")}
                  className={ activeTab === "LINKS" ? "flex px-2 py-1 sm:px-4 cursor-pointer text-gray-800 border-b-2 border-solid border-blue-500 font-bold transition-all duration-150 ease-in" : "flex font-bold px-2 py-1 sm:px-4 cursor-pointer text-gray-800 border-b-2 border-solid border-white"} >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd" />
                         </svg>
                         <span className="hidden md:block">Links</span>
                      </div>
@@ -25,7 +27,7 @@ function Tabs() {
                     onClick={() => toggleTab("LYRICS") }
                 className={ activeTab === "LYRICS" ? "flex px-2 py-1 sm:px-4 cursor-pointer text-gray-800 border-b-2 border-solid border-blue-500 font-bold transition-all duration-150 ease-in" : "flex font-bold px-2 py-1 sm:px-4 cursor-pointer text-gray-800 border-b-2 border-solid border-white"}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clipRule="evenodd" />
+                                <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd" />
                         </svg>
                         <span className="hidden md:block"> Lyrics</span>
                     </div>
@@ -49,7 +51,8 @@ function Tabs() {
                     onClick={() => toggleTab("TICKETS") }
                 className={ activeTab === "TICKETS" ? "flex px-2 py-1 sm:px-4 cursor-pointer text-gray-800 border-b-2 border-solid border-blue-500 font-bold transition-all duration-150 ease-in" : "flex font-bold px-2 py-1 sm:px-4 cursor-pointer text-gray-800 border-b-2 border-solid border-white"}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            <path fillRule="evenodd" d="M3 4a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm2 2V5h1v1H5zM3 13a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1H4a1 1 0 01-1-1v-3zm2 2v-1h1v1H5zM13 3a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1V4a1 1 0 00-1-1h-3zm1 2v1h1V5h-1z" clipRule="evenodd" />
+                            <path d="M11 4a1 1 0 10-2 0v1a1 1 0 002 0V4zM10 7a1 1 0 011 1v1h2a1 1 0 110 2h-3a1 1 0 01-1-1V8a1 1 0 011-1zM16 9a1 1 0 100 2 1 1 0 000-2zM9 13a1 1 0 011-1h1a1 1 0 110 2v2a1 1 0 11-2 0v-3zM7 11a1 1 0 100-2H4a1 1 0 100 2h3zM17 13a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM16 17a1 1 0 100-2h-3a1 1 0 100 2h3z" />
                         </svg>
                       <span className="hidden md:block" >Tickets</span>
                     </div>
@@ -57,8 +60,9 @@ function Tabs() {
         <div className="bg-gray-100">
             {/* Store */}
             <div className={ activeTab === "STORE" ? "max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-2 lg:px-4 py-5 transition-all duration-150 ease-in " : "hidden"}>
-                <h2 className="font-bold text-xs uppercase text-gray-800">Shop As Seen</h2>
-                <p className="text-xs text-gray-400 mb-3">Buy merchandise or products promoted by your favourite artist</p>
+                {/* <h2 className="font-bold text-xs uppercase text-gray-800">Shop As Seen</h2>
+                <p className="text-xs text-gray-400 mb-3">Buy merchandise or products promoted by your favourite artist</p> */}
+                <TopSponsoredContent/>
                 <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden mb-3">
                     <img className="h-24 flex-shrink-0 object-cover"  src="/assets/thumb2.jpg" alt="product image"/>
                     <div>
@@ -82,8 +86,9 @@ function Tabs() {
             </div>
             {/* Lyrics */}
             <div className={activeTab === "LYRICS" ? "max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-2 lg:px-4 py-5 transition-all duration-150 ease-in" : "hidden"}>
-                <h2 className="font-bold text-xs uppercase text-gray-800">Lyrics</h2>
-                <p className="text-xs text-gray-400 mb-3">Learn the words and sing along to your favourite artist</p>
+                {/* <h2 className="font-bold text-xs uppercase text-gray-800">Lyrics</h2>
+                <p className="text-xs text-gray-400 mb-3">Learn the words and sing along to your favourite artist</p> */}
+                <TopSponsoredContent/>
             <div className="bg-white shadow-lg mb-3 p-2">
                 <div>
                     <p className="text-gray-800 font-bold text-xs">Writer & composer</p>
@@ -111,8 +116,9 @@ function Tabs() {
             </div>
             {/* Links */}
             <div className={activeTab === "LINKS" ? "max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-2 lg:px-4 py-5 transition-all duration-150 ease-in" : "hidden"}>
-                <h2 className="font-bold text-xs uppercase text-gray-800">Stream & Download</h2>
-                <p className="text-xs text-gray-400 mb-3">Listen to or buy songs from your favourite artist online</p>
+                {/* <h2 className="font-bold text-xs uppercase text-gray-800">Stream & Download</h2>
+                <p className="text-xs text-gray-400 mb-3">Listen to or buy songs from your favourite artist online</p> */}
+                    <TopSponsoredContent/>
                 <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden mb-3 cursor-pointer">
                     <img className="h-14 w-24 flex-shrink-0 object-cover"  src="/assets/spotify.jpg" alt="product image"/>
                     <div className="flex-1">
@@ -151,8 +157,9 @@ function Tabs() {
             </div>
             {/* skiza tune */}
             <div className={activeTab === "SKIZA" ? "max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-2 lg:px-4 py-5 transition-all duration-150 ease-in" : "hidden"}>
-                <h2 className="font-bold text-xs uppercase text-gray-800">Skiza Tune</h2>
-                <p className="text-xs text-gray-400 mb-3">Entertain your callers with a callback tune from your favourite artist</p>
+                {/* <h2 className="font-bold text-xs uppercase text-gray-800">Skiza Tune</h2>
+                <p className="text-xs text-gray-400 mb-3">Entertain your callers with a callback tune from your favourite artist</p> */}
+                <TopSponsoredContent/>
                 <p className="mt-10 px-16 text-center text-xs text-gray-500">This service is only available in kenya for Safaricom subscribers</p>
                 <div className="mt-3 text-center cursor-pointer">
                 <button className="uppercase text-xs text-blue-500 font-semibold hover:font-bold ">Get skiza tune here</button>
@@ -160,8 +167,9 @@ function Tabs() {
             </div>
             {/* tickets */}
             <div className={activeTab === "TICKETS" ? "max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-2 lg:px-4 py-5 transition-all duration-150 ease-in" : "hidden"}>
-                <h2 className="font-bold text-xs uppercase text-gray-800">Events</h2>
-                <p className="text-xs text-gray-400 mb-3">Buy tickets online to watch your favourite artist perfoming live on stage</p>
+                {/* <h2 className="font-bold text-xs uppercase text-gray-800">Events</h2>
+                <p className="text-xs text-gray-400 mb-3">Buy tickets online to watch your favourite artist perfoming live on stage</p> */}
+                <TopSponsoredContent/>
                 <div className="flex items-center rounded-lg bg-white shadow-lg overflow-hidden mb-3">
                     <img className="h-24 flex-shrink-0 object-cover"  src="/assets/thumb2.jpg" alt="product image"/>
                     <div>
