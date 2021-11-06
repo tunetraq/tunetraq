@@ -1,3 +1,4 @@
+import BottomNav from "./BottomNav"
 import Header from "./Header"
 
 function Layout({ children }) {
@@ -5,7 +6,7 @@ function Layout({ children }) {
         <div>
             <Header/>
             {children }
-            
+            <BottomNav/>
         </div>
     )
 }
