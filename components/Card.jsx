@@ -15,7 +15,7 @@ function Card() {
                 <img className="h-14 w-14 rounded-full object-cover border p-1" src="/assets/profile1.jpg" alt="profile picture"/>
                 </div>
                 <div className="ml-2 flex-1">
-                    <p className="font-bold text-xs uppercase text-gray-800">Bruce Melody</p>
+                    <p className="font-bold text-xs uppercase text-gray-800">Khaligraph Jones Baba yao</p>
                     <p className="text-xs text-gray-400">Released 2 weeks ago</p>
                 </div>
                 <div className="cursor-pointer">
